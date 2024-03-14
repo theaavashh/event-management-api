@@ -1,11 +1,31 @@
 
  <mjml>
     <mj-body>
+      <mj-section padding-top="-40px" >
+        <mj-column width="100%">
+          <mj-text  font-size="20px" font-family="Times New Roman">
+            Event Management 
+          </mj-text>
+        </mj-column>
+      </mj-section>
       <mj-section>
         <mj-column>
-          <mj-text>
-            Hello World!{{name}}
-          </mj-text>
+        <mj-text font-size="25px" font-family="Times New Roman">
+        Hey, {{name}}
+        </mj-text>
+        <mj-text font-family="Times New Roman" font-size="20px">
+         In order to start register for event, you need to confirm your email address
+        </mj-text>
+        </mj-column>
+      </mj-section>
+      <mj-section>
+        <mj-column width="50%">
+        <mj-button font-size="25px" background-color="black" color="white" font-family="Times New Roman" >
+           <a href=`http://localhost:8080/mail/verify?id={{uid}}` style="color:white;">
+            Verify Account 
+           </a>
+        </mj-button>
+          
         </mj-column>
       </mj-section>
     </mj-body>

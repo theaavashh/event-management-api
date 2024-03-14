@@ -1,0 +1,36 @@
+{
+  level: 'info',
+  message: 'Mail Send for verification',
+  service: 'user-service',
+  timestamp: '2024-03-14T16:14:53.138Z'
+}
+{
+  level: 'info',
+  message: 'Mail Send for verification',
+  service: 'user-service',
+  timestamp: '2024-03-14T16:18:40.180Z'
+}
+{
+  level: 'info',
+  message: 'Mail Send for verification',
+  service: 'user-service',
+  timestamp: '2024-03-14T16:22:28.317Z'
+}
+{
+  level: 'info',
+  message: 'Mail Send for verification',
+  service: 'user-service',
+  timestamp: '2024-03-14T16:24:15.876Z'
+}
+{
+  level: 'info',
+  message: 'Mail Send for verification',
+  service: 'user-service',
+  timestamp: '2024-03-14T16:25:33.037Z'
+}
+{
+  level: 'info',
+  message: 'Mail Send for verification',
+  service: 'user-service',
+  timestamp: '2024-03-14T16:37:46.314Z'
+}

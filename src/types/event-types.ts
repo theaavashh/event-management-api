@@ -15,3 +15,9 @@ export interface IResRegister{
 }
 
 export type TLogin = Pick<TUserDetails, "email" | "password"  >
+
+type Uid={
+	uid:string;
+};
+
+export type TUser=TUserDetails & Uid;

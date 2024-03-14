@@ -7,6 +7,7 @@ import { authUser } from "../service/bcrypt.service";
 import generateToken from "../service/jwt.service";
 import { TUserDetails } from "../service/zod.validation";
 import { IResRegister, TLogin } from "../types/event-types";
+import { sendingMail } from "../service/mail.service";
 
 
 const userRepo = AppDataSource.getRepository(User);
@@ -19,6 +20,7 @@ const registerUser = asyncHandler(async (req: Request<{},{},TUserDetails>, res: 
 		message: "User Registration Success",
 		data: savedDetails,
 	});
+	sendingMail();
 });
 
 const loginUser = asyncHandler(async (req: Request<{},{},TLogin>, res: Response) => {

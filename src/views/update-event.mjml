@@ -1,0 +1,33 @@
+
+ <mjml>
+    <mj-body>
+      <mj-section padding-top="-40px" >
+        <mj-column width="100%">
+          <mj-text  font-size="20px" font-family="Times New Roman">
+            Event Management 
+          </mj-text>
+        </mj-column>
+      </mj-section>
+				<mj-table>
+					<table>
+					<thead>
+    <tr>
+      <th>Name</th>
+      <th>Age</th>
+    </tr>
+  </thead>
+  <tbody>
+    {{#each arrData}}
+      <tr>
+        <td>{{this.title}}</td>
+        <td>{{this.description}}</td>
+      </tr>
+    {{/each}}
+  </tbody>
+
+				</mj-table>
+			
+     
+    </mj-body>
+  </mjml>
+

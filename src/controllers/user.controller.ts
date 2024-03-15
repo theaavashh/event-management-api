@@ -1,12 +1,15 @@
+import asyncHandler from "../utilits/asyncHandler.utilis";
+import {generateToken} from "../service/jwt.service";
+
 import { Request, Response } from "express";
 import { AppDataSource } from "../config/datasource.config";
 import { User } from "../entities/User.entity";
-import asyncHandler from "../utilits/asyncHandler.utilis";
+
 import { Status } from "../types/status-enum";
-import { authUser } from "../service/bcrypt.service";
-import generateToken from "../service/jwt.service";
-import { TUserDetails } from "../service/zod.validation";
 import { IResRegister, TLogin } from "../types/event-types";
+
+import { authUser } from "../service/bcrypt.service";
+import { TUserDetails } from "../service/zod.validation";
 import { sendingMail } from "../service/mail.service";
 
 const userRepo = AppDataSource.getRepository(User);
@@ -29,16 +32,16 @@ const loginUser = asyncHandler(async (req: Request<{},{},TLogin>, res: Response)
 
 	if(!findUser) res.status(Status.failed).json({success:false,error:"Verficiation Failed",mesage:"Invalid email or password"});
 
-	if(findUser?.isVerified){
-		const data={...findUser};
+	if(!findUser?.isVerified) res.status(Status.failed).json({success:false, message:"Email verification Failed"});
 
-		const isAuthenticate=await authUser(req.body.password,data.password! );
+	const data={...findUser};
 
-		if(!isAuthenticate) res.status(Status.bad_request).json({success:false, message:"Credential Match Failed"});
+	const isAuthenticate=await authUser(req.body.password,data.password! );
 
-		const token=generateToken(data.uid!);
-		res.status(Status.success).json({success:true, message: "Login Success", token});
-	}
+	if(!isAuthenticate) res.status(Status.bad_request).json({success:false, message:"Credential Match Failed"});
+
+	const token=generateToken(data.uid!,data.role!);
+	res.status(Status.success).json({success:true, message: "Login Success", token});
 });
 
 
@@ -50,7 +53,7 @@ const emailVerify=asyncHandler(async(req:Request,res:Response)=>{
 
 		data!.isVerified=true;
 		await userRepo.save(data!);
-		res.status(200).json({success:true, message:"Email verification successfully"});
+		return res.status(200).json({success:true, message:"Email verification successfully"});
 	}
 	res.status(Status.bad_request).json({success:false,message:"Something went wrong"});
 });

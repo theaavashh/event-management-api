@@ -14,6 +14,15 @@ export interface IResRegister{
 	data:object
 }
 
+export interface IType{
+	id:number,
+	title:string,
+	description:string,
+	thumbnail:string,
+	price:number,
+	seat?:number
+}
+
 export type TLogin = Pick<TUserDetails, "email" | "password"  >
 
 type Uid={

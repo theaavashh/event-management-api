@@ -10,15 +10,53 @@ const User=z.object({
 	password:z.string(),
 });
 
+const Login=z.object({
+	email:z.string().email(),
+	password:z.string()
+});
+
+const Event=z.object({
+	title:z.string(),
+	description:z.string(),
+	seat:z.number(),
+	price:z.number(),
+});
+
 type TUserDetails=z.infer<typeof User>
 
 const userValidation=(req:Request,res:Response,next:NextFunction)=>{
 	const validationStatus=User.safeParse(req.body);
 	if(validationStatus.success) next();
 	else {
-		const err=validationStatus.error.message;
+		const err=validationStatus.error.errors;
 		res.status(Status.bad_request).json({"validation-error":err});
 	}	
 };
 
-export {userValidation, TUserDetails};
+
+const loginValidation=(req:Request,res:Response,next:NextFunction)=>{
+	const validationStatus=Login.safeParse(req.body);
+	if(validationStatus.success) next();
+	else{
+		const err=validationStatus.error.errors;
+		res.status(Status.bad_request).json({"validation-error":err});
+	}
+};
+
+const eventValidation=(req:Request,res:Response,next:NextFunction)=>{
+	req.body.seat=parseInt(req.body.seat);
+	req.body.price=parseInt(req.body.price);
+	const validationStatus=Event.safeParse(req.body);
+	console.log(validationStatus);
+	if(validationStatus.success) next();
+	else {
+		const err=validationStatus.error.errors;
+		res.status(Status.bad_request).json({"validation-error":err});
+	}	
+};
+
+
+
+
+
+export {userValidation, eventValidation, loginValidation, TUserDetails};

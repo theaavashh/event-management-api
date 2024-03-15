@@ -3,7 +3,7 @@ import { registerUser } from "../src/controllers/user.controller";
 import app from "../src/app";
 
 
-test("should check user registration",async()=>{
+test("should return true if exist",async()=>{
 	const data={
 		fullname:"demo",
 		email:"demo@demo.com",

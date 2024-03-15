@@ -1,4 +1,5 @@
-import { Column, Entity, PrimaryGeneratedColumn } from "typeorm";
+import { Column, Entity, JoinTable, ManyToMany, PrimaryGeneratedColumn } from "typeorm";
+import { User } from "./User.entity";
 
 @Entity({name:"Event"})
 export class Event{
@@ -17,7 +18,13 @@ export class Event{
 	@Column()
 		price: number;
 
-	
+	@Column({type:"date", default: () => "CURRENT_TIMESTAMP"})
+		createdAt:Date;
+
+	@ManyToMany(()=> User,{eager:true})
+	@JoinTable()
+		user:User[];
+
 }
 
 

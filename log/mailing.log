@@ -34,3 +34,165 @@
   service: 'user-service',
   timestamp: '2024-03-14T16:37:46.314Z'
 }
+{
+  level: 'info',
+  message: 'Mail Send for verification',
+  service: 'user-service',
+  timestamp: '2024-03-14T19:03:23.487Z'
+}
+{
+  level: 'info',
+  message: 'Today Event Send To Mail',
+  service: 'user-service',
+  timestamp: '2024-03-14T19:03:43.792Z'
+}
+{
+  level: 'info',
+  message: 'Today Event Send To Mail',
+  service: 'user-service',
+  timestamp: '2024-03-14T19:04:04.243Z'
+}
+{
+  level: 'info',
+  message: 'Today Event Send To Mail',
+  service: 'user-service',
+  timestamp: '2024-03-14T19:14:03.816Z'
+}
+{
+  level: 'info',
+  message: 'Today Event Send To Mail',
+  service: 'user-service',
+  timestamp: '2024-03-14T19:14:43.593Z'
+}
+{
+  level: 'info',
+  message: 'Today Event Send To Mail',
+  service: 'user-service',
+  timestamp: '2024-03-14T19:15:03.712Z'
+}
+{
+  level: 'info',
+  message: 'Today Event Send To Mail',
+  service: 'user-service',
+  timestamp: '2024-03-14T19:15:24.312Z'
+}
+{
+  level: 'info',
+  message: 'Today Event Send To Mail',
+  service: 'user-service',
+  timestamp: '2024-03-14T19:15:43.916Z'
+}
+{
+  level: 'info',
+  message: 'Today Event Send To Mail',
+  service: 'user-service',
+  timestamp: '2024-03-14T19:16:04.417Z'
+}
+{
+  level: 'info',
+  message: 'Today Event Send To Mail',
+  service: 'user-service',
+  timestamp: '2024-03-14T19:16:23.726Z'
+}
+{
+  level: 'info',
+  message: 'Today Event Send To Mail',
+  service: 'user-service',
+  timestamp: '2024-03-14T19:16:43.509Z'
+}
+{
+  level: 'info',
+  message: 'Today Event Send To Mail',
+  service: 'user-service',
+  timestamp: '2024-03-14T19:17:03.650Z'
+}
+{
+  level: 'info',
+  message: 'Today Event Send To Mail',
+  service: 'user-service',
+  timestamp: '2024-03-14T19:17:23.529Z'
+}
+{
+  level: 'info',
+  message: 'Today Event Send To Mail',
+  service: 'user-service',
+  timestamp: '2024-03-14T19:17:44.383Z'
+}
+{
+  level: 'info',
+  message: 'Today Event Send To Mail',
+  service: 'user-service',
+  timestamp: '2024-03-14T19:18:03.568Z'
+}
+{
+  level: 'info',
+  message: 'Today Event Send To Mail',
+  service: 'user-service',
+  timestamp: '2024-03-14T19:18:23.587Z'
+}
+{
+  level: 'info',
+  message: 'Mail Send for verification',
+  service: 'user-service',
+  timestamp: '2024-03-15T05:34:53.713Z'
+}
+{
+  level: 'info',
+  message: 'Mail Send for verification',
+  service: 'user-service',
+  timestamp: '2024-03-15T05:58:21.036Z'
+}
+{
+  level: 'info',
+  message: 'Mail Send for verification',
+  service: 'user-service',
+  timestamp: '2024-03-15T06:02:20.427Z'
+}
+{
+  level: 'info',
+  message: 'Mail Send for verification',
+  service: 'user-service',
+  timestamp: '2024-03-15T06:06:41.646Z'
+}
+{
+  level: 'info',
+  message: 'Mail Send for verification',
+  service: 'user-service',
+  timestamp: '2024-03-15T06:11:49.871Z'
+}
+{
+  level: 'info',
+  message: 'Mail Send for verification',
+  service: 'user-service',
+  timestamp: '2024-03-15T06:13:43.331Z'
+}
+{
+  level: 'info',
+  message: 'Mail Send for verification',
+  service: 'user-service',
+  timestamp: '2024-03-15T06:22:39.818Z'
+}
+{
+  level: 'info',
+  message: 'Mail Send for verification',
+  service: 'user-service',
+  timestamp: '2024-03-15T06:25:37.482Z'
+}
+{
+  level: 'info',
+  message: 'Mail Send for verification',
+  service: 'user-service',
+  timestamp: '2024-03-15T06:27:54.908Z'
+}
+{
+  level: 'info',
+  message: 'Mail Send for verification',
+  service: 'user-service',
+  timestamp: '2024-03-15T06:29:38.741Z'
+}
+{
+  level: 'info',
+  message: 'Sending Booking Confirmation Mail',
+  service: 'user-service',
+  timestamp: '2024-03-15T07:30:27.454Z'
+}

@@ -1,11 +1,10 @@
-import {Request,Response, NextFunction } from "express";
-
+import { Request, Response, NextFunction } from "express";
 
 // eslint-disable-next-line @typescript-eslint/ban-types
-const asyncHandler=(requestHandler:Function)=>{
-	return (req:Request,res:Response,next:NextFunction)=>{
-		Promise.resolve(requestHandler(req,res,next)).catch(next);
+const wrapAsync = (requestHandler: Function) => {
+	return (req: Request, res: Response, next: NextFunction) => {
+		Promise.resolve(requestHandler(req, res, next)).catch((err) => next(err));
 	};
 };
 
-export default asyncHandler;
+export { wrapAsync };

@@ -14,7 +14,7 @@
         Hey, {{name}}
         </mj-text>
         <mj-text font-family="Times New Roman" font-size="20px">
-         Your seat has booked. Thank You For Event Registration
+         Your seat has been confirmed. Thank You For Event Registration
         </mj-text>
         </mj-column>
       </mj-section>

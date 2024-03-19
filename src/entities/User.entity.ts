@@ -1,33 +1,29 @@
+/* eslint-disable indent */
 import { Column, Entity, PrimaryGeneratedColumn } from "typeorm";
 
-
-@Entity({name:"User"})
-export class User{
+@Entity({ name: "User" })
+export class User {
 	@PrimaryGeneratedColumn()
-		uid:string;
+	uid: string;
 
 	@Column()
-		fullname:string;
+	fullname: string;
 
 	@Column()
-		address:string;
+	address: string;
 
 	@Column()
-		email:string;
+	email: string;
 
 	@Column()
-		password:string;
+	password: string;
 
-	@Column({default:"user"})
-		role:string;
+	@Column({ default: "user" })
+	role: string;
 
-	@Column({default:false})
-		isVerified:boolean;
+	@Column({ default: false })
+	isVerified: boolean;
 
+	@Column({ nullable: true })
+	refreshToken: string;
 }
-
-
-
-
-
-

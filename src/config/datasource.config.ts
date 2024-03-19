@@ -3,15 +3,12 @@ import { DataSource } from "typeorm";
 import { Event } from "../entities/Event.entity";
 import { User } from "../entities/User.entity";
 
-
-
 const AppDataSource = new DataSource({
 	type: "postgres",
 	url: process.env.DB_URI,
 	synchronize: true,
-	entities: [Event,User],
-	logging:true
-
+	entities: [User, Event],
+	logging: true,
 });
 
 const dbConfig = async () => {
@@ -25,4 +22,4 @@ const dbConfig = async () => {
 };
 
 export default dbConfig;
-export {AppDataSource};
+export { AppDataSource };

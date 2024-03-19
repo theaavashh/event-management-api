@@ -1,0 +1,171 @@
+openapi: 3.0.0
+info:
+  title: Event-Management API
+  description: APIs documentation of Task
+  version: 1.0.0
+servers:
+  - url: "http://localhost:8080/api/v1/"
+    description: Development Server
+  
+components:
+  securitySchemes:
+    bearerAuth:
+      type: http
+      scheme: bearer
+      bearerFormat: JWT
+
+paths:
+  /user:
+    post:
+      tags: [User]
+      summary: Post User Details
+      description: |
+        The API endpoint is designed for the users registration. For the registering of user, this endpoint is created where fullname, email, address and password are send to the backend.
+
+        It provides a convenient way to obtain randomized user information for various purposes within your application.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                fullname:
+                  type: string
+                  example: Aavash
+                address:
+                  type: string
+                  example: bhaktapur
+                email:
+                  type: string
+                  example: thataavashhganesh0@gmail.com
+                password:
+                  type: string
+                  example: itsapassword
+                
+      responses:
+        '200':
+          description: Success
+        '404':
+          description: Not Found
+
+  /login:
+    post:
+      tags: [User]
+      summary: Login User
+      description: |
+        Login Process Successfully
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                email:
+                  type: string
+                  example: user@email.com
+                password:
+                  type: string
+                  example: password
+      responses:
+        '200':
+          description: success
+        '404':
+          description: failed
+
+
+  /event:
+    post:
+      tags: [Event]
+      summary: Add Event
+      description: |
+        This includes all the event post
+      security:
+        - bearerAuth: []  
+      requestBody:
+        required: true
+        content:
+          multipart/form-data:
+            schema: 
+              type: object
+              properties:
+                title:
+                  type: string
+                  example: albartoss concert
+                description:
+                  type:  string
+                  example: a concert for albartoss fan
+                thumbnail:
+                  type: string
+                  format: binary
+                price:
+                  type: number
+                  example: 300
+                seat:
+                  type: number
+                  example: 200
+      responses:
+        '200':
+          description: success
+        '500':
+          description: server error
+
+    get:
+        summary: Get all event along with register user
+        tags: [Event]
+        responses:
+          "200":
+            description: Success
+          "400":
+            description: Failed
+
+                
+  /event/{id}:
+    post:
+      summary: Register for event
+      tags: 
+        - Event
+      security:
+        - bearerAuth: []  
+      parameters:
+        - in: path
+          name: id
+          required: true
+          schema:
+            type: integer
+            description: ID of the event 
+      responses:
+        '200':
+          description: Success
+        '400':
+          description: Failed
+
+
+    get:
+      summary: Get event with specific id
+      tags: [Event]
+      parameters:
+        - in: path
+          name: id
+          required: true
+          schema:
+            type: integer
+      responses:
+        "200":
+          description: Success
+        "400":
+          description: Failed
+
+
+  /generate/token:
+    get:
+      responses:
+        "201":
+          description: "token created"
+        "401":
+          description: "Unauthorized Access"
+
+
+  
+    

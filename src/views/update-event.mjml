@@ -8,23 +8,31 @@
           </mj-text>
         </mj-column>
       </mj-section>
+      <mj-text>
+        List of Event : As of {{2024-03-15}}
+      </mj-text>
 				<mj-table>
 					<table>
 					<thead>
     <tr>
-      <th>Name</th>
-      <th>Age</th>
+      <th padding="30px">Event Title</th>
+      <th padding="30px">Description</th>
+      <th padding="30px">Price</th>
+      <th padding="30px">Seat</th>
+      <th>CreatedAt</th>
     </tr>
   </thead>
   <tbody>
     {{#each arrData}}
       <tr>
-        <td>{{this.title}}</td>
-        <td>{{this.description}}</td>
+        <td padding="30px">{{this.title}}</td>
+        <td padding="30px">{{this.description}}</td>
+        <td padding="30px">{{this.price}}</td>
+        <td padding="30px">{{this.seat}}</td>
+        <td padding="30px">{{this.createdAt}}</td>
       </tr>
     {{/each}}
   </tbody>
-
 				</mj-table>
 			
      

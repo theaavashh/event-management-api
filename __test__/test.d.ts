@@ -4,6 +4,8 @@ export const mockRequest = {
 	body: {
 		fullname: "example",
 		email: "example@demo.com",
+		password: "fakepassword",
+		address: "bhaktapur",
 	},
 } as IRegUsers;
 
@@ -15,12 +17,8 @@ export const mockResponse = {
 export const next = {} as unknown as NextFunction;
 
 export const insertDetailsMock = {
-	fullname: "aavashh",
-	uid: "1",
-	address: "ajaja",
-	email: "jajajja",
-	password: "ajajja",
+	...mockRequest.body,
 	role: "user",
 	isVerified: false,
-	refreshToken: "jajjajaja",
+	refreshToken: null,
 };

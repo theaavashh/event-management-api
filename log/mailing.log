@@ -988,3 +988,93 @@
   service: 'user-service',
   timestamp: '2024-03-19T04:33:06.907Z'
 }
+{
+  level: 'info',
+  message: 'Mail Send for verification',
+  service: 'user-service',
+  timestamp: '2024-03-19T07:54:35.520Z'
+}
+{
+  level: 'info',
+  message: 'Mail Send for verification',
+  service: 'user-service',
+  timestamp: '2024-03-19T07:56:38.948Z'
+}
+{
+  level: 'info',
+  message: 'Mail Send for verification',
+  service: 'user-service',
+  timestamp: '2024-03-19T07:56:56.359Z'
+}
+{
+  level: 'info',
+  message: 'Mail Send for verification',
+  service: 'user-service',
+  timestamp: '2024-03-19T07:59:52.702Z'
+}
+{
+  level: 'info',
+  message: 'Mail Send for verification',
+  service: 'user-service',
+  timestamp: '2024-03-19T08:04:32.058Z'
+}
+{
+  level: 'info',
+  message: 'Mail Send for verification',
+  service: 'user-service',
+  timestamp: '2024-03-19T08:09:07.004Z'
+}
+{
+  level: 'info',
+  message: 'Mail Send for verification',
+  service: 'user-service',
+  timestamp: '2024-03-19T08:09:49.502Z'
+}
+{
+  level: 'info',
+  message: 'Mail Send for verification',
+  service: 'user-service',
+  timestamp: '2024-03-19T08:22:19.034Z'
+}
+{
+  level: 'info',
+  message: 'Mail Send for verification',
+  service: 'user-service',
+  timestamp: '2024-03-19T08:39:39.998Z'
+}
+{
+  level: 'info',
+  message: 'Mail Send for verification',
+  service: 'user-service',
+  timestamp: '2024-03-19T08:40:02.625Z'
+}
+{
+  level: 'info',
+  message: 'Mail Send for verification',
+  service: 'user-service',
+  timestamp: '2024-03-19T08:43:24.776Z'
+}
+{
+  level: 'info',
+  message: 'Mail Send for verification',
+  service: 'user-service',
+  timestamp: '2024-03-19T08:43:42.247Z'
+}
+{
+  level: 'info',
+  message: 'Sending Booking Confirmation Mail',
+  service: 'user-service',
+  timestamp: '2024-03-19T08:45:22.533Z'
+}
+{
+  level: 'info',
+  message: 'Mail Send for verification',
+  service: 'user-service',
+  timestamp: '2024-03-19T09:03:45.757Z'
+}
+{
+  level: 'info',
+  message: 'Sending Booking Confirmation Mail',
+  service: 'user-service',
+  timestamp: '2024-03-19T09:09:43.295Z'
+}

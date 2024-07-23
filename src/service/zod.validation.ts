@@ -43,8 +43,6 @@ const loginValidation = (req: Request, res: Response, next: NextFunction) => {
 };
 
 const eventValidation = (req: Request, res: Response, next: NextFunction) => {
-	console.log(req.body);
-	console.log(req.file?.filename);
 	req.body.seat = parseInt(req.body.seat);
 	req.body.price = parseInt(req.body.price);
 	const validationStatus = Event.safeParse(req.body);
